@@ -1,6 +1,6 @@
 # vue-alert-simple
 
-> A Vue.js project
+> A simple vue modal plugin
 
 ## Build Setup
 
