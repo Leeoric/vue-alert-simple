@@ -1,0 +1,103 @@
+@import "../common/mixin";
+@import "../common/base";
+
+$background-color: #fff;
+$color-text: #4aae9b;
+
+.alert-wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: $z-index-absolute-top;
+  .backdrop {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .3);
+  }
+  .alert-main-body {
+    z-index: $z-index-absolute-top;
+    background: #fff;
+    height: auto;
+    width: 280px;
+    border-radius: 10px;
+    text-align: center;
+    .alert-header {
+      padding: 20px 15px 0 15px;
+      border-bottom: none;
+      position: relative;
+      color: #000;
+      .alert-title {
+        -webkit-font-smoothing: subpixel-antialiased !important;
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 17px;
+        font-weight: bold;
+      }
+    }
+    .alert-body {
+      padding: 0 15px;
+      box-sizing: border-box;
+      margin-top: 8px;
+      font-size: 13px;
+      line-height: 18px;
+      -webkit-font-smoothing: antialiased !important;
+      font-weight: normal;
+    }
+    .hairline-bottom {
+      bottom: 0;
+      transform-origin: 0 100%;
+      transform: scaleY(0.5);
+      &:after {
+        content: "";
+        position: absolute;
+        background-color: #ddd;
+        display: block;
+        left: 0;
+        right: auto;
+        height: 1px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
+    .alert-footer {
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+      height: 45px;
+      min-height: 45px;
+      .alert-footer-close {
+        -webkit-font-smoothing: subpixel-antialiased !important;
+        position: relative;
+        padding: 0;
+        height: 45px;
+        min-height: 45px;
+        border: none;
+        margin: 0;
+        font-size: 17px;
+        line-height: 45px;
+        background: transparent;
+        color: #4a90e2;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        vertical-align: top;
+        text-align: center;
+        text-overflow: ellipsis;
+        min-width: 52px;
+        width: 100%;
+        margin:0 auto;
+        &:active {
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+  
+}
