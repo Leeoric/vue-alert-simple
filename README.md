@@ -46,6 +46,9 @@ methods: {
 | buttonText       | 关闭按钮的文字 |String | ”关闭”
 
 ### Slots 支持自定义插槽
+```
+//文档准备中
+```
 
 ## toast示例
 
