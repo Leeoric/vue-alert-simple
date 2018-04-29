@@ -1,18 +1,67 @@
-# vue-alert-simple
+# vue-simple-modal
 
-> A simple vue modal plugin
+A Vue component to pay-keyboard
+一个简单的vue弹窗插件
 
-## Build Setup
+## 安装
 
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
+```JS
+npm i vue-alert-simple -S
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## 使用
+
+```js
+import VueAlertPlugin from 'vue-alert-simple'
+Vue.use(VueAlertPlugin)
+
+// 作为组件的方式使用（alert组件）
+<v-alert></v-alert>
+```
+
+## alert弹出框示例
+
+```html
+    <v-alert :visible="isShow" @close="close"></v-alert>
+```
+
+```javascript
+methods: {
+    open() {
+      this.isShow = true;
+    },
+    close() {
+      this.isShow = false
+    }
+  }
+```
+
+## alert弹出框 Props
+
+|    name    |    Description   |   type   |default|
+| -----------------  | ---------------- | :--------: | :----------: |
+| width       | 弹出框宽度 |String| 280px
+| title        | 弹出框标题 |Strging | "提示"
+| content        | 弹出框提示内容 |String | ""
+| buttonText       | 关闭按钮的文字 |String | ”关闭”
+
+### Slots 支持自定义插槽
+
+## toast示例
+
+```javascript
+mounted() {
+    this.$toast({
+      msg: this.msg,
+      time: 3000
+    })
+  }
+```
+
+### Props
+
+|    name    |    Description   |   type   |default|
+| -----------------  | ---------------- | :--------: | :----------: |
+| msg       | toast内容 |String| ""
+| time        | 显示时长 |Strging | "3000"
+
