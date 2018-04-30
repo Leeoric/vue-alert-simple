@@ -44,6 +44,7 @@ methods: {
 | title        | 弹出框标题 |Strging | "提示"
 | content        | 弹出框提示内容 |String | ""
 | buttonText       | 关闭按钮的文字 |String | ”关闭”
+| isShow       | 出现弹窗 |Boolean | false
 
 ### Slots 支持自定义插槽
 ```
