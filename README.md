@@ -66,5 +66,5 @@ mounted() {
 |    name    |    Description   |   type   |default|
 | -----------------  | ---------------- | :--------: | :----------: |
 | msg       | toast内容 |String| ""
-| time        | 显示时长 |Strging | "3000"
+| time        | 显示时长 |String | "3000"
 
